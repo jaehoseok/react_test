@@ -3,7 +3,7 @@ import Post from '../Post/Post.js'
 import api from '../API/API'
 import './PostRegister.css'
 
-function PostRegister() {
+function PostRegister(props) {
 
     const [TITLE, setTITLE] = useState('')  
     const [CONTENT, setCONTENT] = useState('')
@@ -11,6 +11,7 @@ function PostRegister() {
     const handleSend = async () => {
         console.log(TITLE, CONTENT);
         await api.post(TITLE, CONTENT)
+        props.history.push('/postList')
     }
 
     return (

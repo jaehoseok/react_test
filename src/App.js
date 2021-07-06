@@ -5,6 +5,7 @@ import Login from './Component/Login/Login';
 import Register from './Component/Register/Register';
 import PostRegister from './Component/PostRegister/PostRegister';
 import PostList from './Component/PostList/PostList';
+import PostDetail from './Component/PostDetail/PostDetail';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/register' component={Register}/>
           <Route exact path='/postRegister' component={PostRegister}/>
           <Route exact path='/postList' component={PostList}/>
+          <Route exact path='/postDetail/:key' component={PostDetail}/>
         </Switch>
       </div>
     </BrowserRouter>

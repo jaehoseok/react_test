@@ -55,5 +55,26 @@ export default{
         .catch(err => {
             console.log(err);
         })
+    },
+
+    postDetail(postToken){
+        return axios({
+            method: 'get',
+            url: '/post/detail/'+postToken
+        })
+        .then(res => {
+            console.log(res.data);
+            return(res.data)
+        })
+    },
+
+    postDelete(postToken){
+        return axios({
+            method: 'delete',
+            url: '/post/'+postToken
+        })
+        .then(res => {
+            console.log(res.status);
+        })
     }
 }

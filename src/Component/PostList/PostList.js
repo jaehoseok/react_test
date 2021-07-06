@@ -1,37 +1,41 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Post from '../Post/Post'
 
 import './PostList.css'
 
 import api from '../API/API'
-import PostForm from '../PostForm/PostForm';
+import { Link } from 'react-router-dom'
 
 function PostList() {
 
+
+    const [LIST, setLIST] = useState([])
+
     let list = [];
-    let data=0;
+    let data;
+
+    const postInfo = () => {
+
+    }
 
     useEffect(async () => {
         data = await api.postList()
 
         if(data!=null){
-            for(let i=0; i<data.length; i++){
-                list.push(
-                    // <div>
-                    //     <a key={data[i].postToken} className='words'>{data[i].title}</a>
-                    // </div>
-                    "dddd"
-                )
-            }
+            list = data.map((post) => 
+                <Link className="words" key={post.postToken} to={`/postDetail/${post.postToken}`}>
+                    제목 : {post.title}
+                </Link>
+            )
         }
-        console.log(list);
-    }, [])
+        setLIST(list)
+    }, [data])
 
     return (
         <div>
             <Post/>
             <div className='PostList'>
-                {list}
+                {LIST}
             </div>
         </div>
     )

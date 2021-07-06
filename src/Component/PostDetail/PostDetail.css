@@ -1,0 +1,71 @@
+.postDetail {
+    margin: auto;
+    margin-top: 7%;
+    width: 80%;
+    justify-content: left;
+}
+
+
+.detailTitle {
+    width: 100%;
+    margin-right: auto;
+    float: left;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.detailDate {
+    width: 100%;
+    float: left;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.detailContent {
+    width: 100%;
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: left;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.btn-box {
+    display: flex;
+    float: right;
+}
+
+.deleteBtn {
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.listBtn {
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.listBtn:link{
+    color: black
+}
+
+.listBtn:visited{
+    color: black;
+}
+
+.listBtn:hover{
+    color: black;
+}
+
+.listBtn:active{
+    color: black;
+}
