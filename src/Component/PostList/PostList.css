@@ -1,0 +1,13 @@
+.PostList {
+    margin: auto;
+    margin-top: 300px;
+    width: 80%;
+    height: 500px;
+}
+
+.words {
+    width: 500px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+}
